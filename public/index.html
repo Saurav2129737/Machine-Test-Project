@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Employee</h1>
+        <form id="employeeForm" action="/create" method="POST" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}">
+
+            <label for="designation">Designation:</label>
+            <select id="designation" name="designation">
+                <option value="HR">HR</option>
+                <option value="Manager">Manager</option>
+                <option value="Sales">Sales</option>
+            </select>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+
+            <label>Course:</label>
+            <input type="checkbox" name="course" value="MCA"> MCA
+            <input type="checkbox" name="course" value="BCA"> BCA
+            <input type="checkbox" name="course" value="BSC"> BSC
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/jpeg, image/png" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
